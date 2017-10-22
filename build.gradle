@@ -31,6 +31,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.cloud:spring-cloud-starter-oauth2')
 	compile('org.apache.cxf:cxf-spring-boot-starter-jaxrs:3.1.11')
+	compile('com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider')
 	compile('org.springframework.retry:spring-retry')
 	compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.springframework.boot:spring-boot-starter-validation')
@@ -45,4 +46,10 @@ dependencyManagement {
 	imports {
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
 	}
+    dependencies {
+        dependency 'com.fasterxml.jackson.core:jackson-core:2.9.2'
+        dependency 'com.fasterxml.jackson.core:jackson-annotations:2.9.2'
+        dependency 'com.fasterxml.jackson.core:jackson-databind:2.9.2'
+        dependency 'com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.2'
+    }
 }
